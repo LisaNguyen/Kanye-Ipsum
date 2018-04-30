@@ -5,10 +5,11 @@
 }
 
 .GeneratedText__heading {
-  margin-top: 30px;
-  font-weight: 700;
-  font-size: 3em;
-  letter-spacing: -1px;
+  margin: 50px 30px;
+  font-size: 2em;
+  text-align: center;
+  font-family: 'Helvetica', sans-serif;
+  font-weight: 800;
 }
 
 .GeneratedText__sub-heading {
@@ -17,9 +18,9 @@
 }
 
 .GeneratedText__paragraph {
-  margin: 0 auto;
-  line-height: 1.5;
-  letter-spacing: 1.5px;
-  width: 75%;
-  margin-top: 40px;
+  font-family: 'Roboto Slab', sans-serif;
+  line-height: 1.5em;
+  font-size: 0.9em;
+  width: 80%;
+  margin: 30px auto;
 }

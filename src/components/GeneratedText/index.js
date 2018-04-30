@@ -18,18 +18,21 @@ class GeneratedText extends Component {
   What if Kanye made a song about Kanye
   Called 'I Miss The Old Kanye'? Man, that'd be so Kanye
   That's all it was Kanye, we still love Kanye
-  And I love you like Kanye loves Kanye.`];
+  And I love you like Kanye loves Kanye.`,
+  `Your conscience should allow a physical manifestation of your
+  subconscious but right now most people's conscious is too affected
+  by other people’s thoughts and it creates a disconnect from you doing
+  what you actually feel now. Instead of doing what you feel, you just
+  do what other people think you should do.`];
 
     this.state = { paragraphs: kanyeParagraphs };
   }
 
   generateGraphs() {
+    const paragraphs = this.state.paragraphs.map((paragraph, index) => <div key={index} className="GeneratedText__paragraph">{paragraph}</div>);
     return (
     <div>
-      <p className="GeneratedText__paragraph">{this.state.paragraphs[0]}</p>
-      <p className="GeneratedText__paragraph">{this.state.paragraphs[1]}</p>
-      <p className="GeneratedText__paragraph">{this.state.paragraphs[0]}</p>
-      <p className="GeneratedText__paragraph">{this.state.paragraphs[1]}</p>
+      {paragraphs}
     </div>
     );
   }
@@ -38,9 +41,11 @@ class GeneratedText extends Component {
     return (
       <div className="GeneratedText__container col-lg-6">
         <h2 className="GeneratedText__heading">
-          Ye Approved Content -  <span className="GeneratedText__sub-heading"></span>
+          Interlude:
         </h2>
-        {this.generateGraphs()}
+        <div className="GeneratedText__paragraphs-container">
+          {this.generateGraphs()}
+        </div>
       </div>
     );
   }
