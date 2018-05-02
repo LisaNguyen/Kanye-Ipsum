@@ -5,6 +5,7 @@
 }
 
 .GeneratedText__heading {
+  animation: slideInRight .7s ease-in;
   margin: 50px 30px;
   font-size: 2em;
   text-align: center;
@@ -23,4 +24,21 @@
   font-size: 0.9em;
   width: 80%;
   margin: 30px auto;
+}
+
+@keyframes slideInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+
+  80% {
+    opacity: .6;
+    transform: translateX(-10%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
 }

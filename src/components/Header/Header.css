@@ -13,6 +13,7 @@
 }
 
 .Header__heading--primary {
+  animation: fadeIn .7s ease-in;
   position: absolute;
   left: -135px;
   top: 45%;
@@ -68,6 +69,20 @@ hr {
 
   .Header__heading--main-left {
     margin-left: 30px;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  80% {
+    opacity: .5;
+  }
+
+  100% {
+    opacity: 1;
   }
 }
 

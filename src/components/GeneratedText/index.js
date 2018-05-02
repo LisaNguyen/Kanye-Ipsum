@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import _ from 'lodash';
 import './GeneratedText.css';
 
 class GeneratedText extends Component {
@@ -19,21 +20,24 @@ class GeneratedText extends Component {
   Called 'I Miss The Old Kanye'? Man, that'd be so Kanye
   That's all it was Kanye, we still love Kanye
   And I love you like Kanye loves Kanye.`,
-  `Your conscience should allow a physical manifestation of your
-  subconscious but right now most people's conscious is too affected
-  by other people’s thoughts and it creates a disconnect from you doing
-  what you actually feel now. Instead of doing what you feel, you just
-  do what other people think you should do.`];
+  `Worry about your character, not your reputation. Your character
+  is who you are. Your reputation is who people think you are.`];
 
     this.state = { paragraphs: kanyeParagraphs };
   }
 
   generateGraphs() {
-    const paragraphs = this.state.paragraphs.map((paragraph, index) => <div key={index} className="GeneratedText__paragraph">{paragraph}</div>);
+    this.state.paragraphs = _.shuffle(this.state.paragraphs);
+    const paragraphs = [];
+
+    for(let i = 0; i < this.props.count; i++) {
+      paragraphs.push(<div key={i} className="GeneratedText__paragraph">{this.state.paragraphs[i]}</div>)
+    }
+
     return (
-    <div>
-      {paragraphs}
-    </div>
+      <div>
+        {paragraphs}
+      </div>
     );
   }
 

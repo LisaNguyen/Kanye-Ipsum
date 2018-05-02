@@ -1,0 +1,14 @@
+.Footer__container {
+  position: absolute;
+  bottom: 0;
+}
+
+.Footer__credits {
+  letter-spacing: 1.4px;
+  font-size: .65em;
+  font-weight: 700;
+}
+
+.Footer__credits--sub {
+  color: #eee;
+}
