@@ -14,5 +14,15 @@
 }
 
 .Footer__credits--sub {
+  transition: all .3s;
+}
+
+.Footer__credits--sub,
+.Footer__credits--sub:hover {
   color: #eee;
+  text-decoration: none;
+}
+
+.Footer__credits--sub:hover {
+  transform: scale(1.3);
 }
