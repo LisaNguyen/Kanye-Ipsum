@@ -26,6 +26,15 @@
   margin: 30px auto;
 }
 
+@media screen and (max-width: 991px) {
+  .GeneratedText__container {
+    background-color: #EAEAEA;
+    height: 100%;
+    padding-bottom: 20px;
+    overflow-y: hidden;
+  }
+}
+
 @keyframes slideInRight {
   0% {
     opacity: 0;

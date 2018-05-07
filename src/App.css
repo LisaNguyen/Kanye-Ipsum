@@ -5,3 +5,9 @@ body {
 .Kanye-ipsum__container {
   margin: 20px;
 }
+
+@media screen and (max-width: 500px) {
+  .Kanye-ipsum__container {
+    margin: 0;
+  }
+}
